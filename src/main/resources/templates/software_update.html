@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Software Management System</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">	
+</head>
+<body>
+	<div class="container my-2">
+		<img width="100%" th:src="@{../../images/wellsFargoHeader.jpg}"/>
+	</div>
+	<div class="container">
+		<h1>Software Management System</h1>
+		<hr>
+		<h2>Update Software</h2>
+
+		<form action="#" th:action="@{/software/saveSoftware}" th:object="${software}" method="POST">
+
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}" /> 
+			
+			<input type="text" th:field="*{softwareName}" class="form-control mb-4 col-4"> 
+				
+			<input type="text" th:field="*{softwareDesc}" class="form-control mb-4 col-4">
+
+			<input type="text" th:field="*{softwareVer}" class="form-control mb-4 col-4">
+
+			<input type="text" th:field="*{dueDate}" class="form-control mb-4 col-4">
+
+			<button type="submit" class="btn btn-info col-2">Update Software</button>
+			
+		</form>
+
+		<hr>
+
+		<a th:href="@{/software/}"> Back to Software List</a>
+		<a th:href="@{/}"> | Home</a>
+	</div>
+	<div class="container my-2">
+		<img width="100%" th:src="@{../../images/wellsFargoFooter.jpg}"/>
+	</div>
+</body>
+</html>

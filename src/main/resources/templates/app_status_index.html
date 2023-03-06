@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="layouts/default">
+<head>
+<meta charset="ISO-8859-1">
+<title>Application Software Management System</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container my-2">
+		<img width="100%" th:src="@{images/wellsFargoHeader.jpg}"/>
+	</div>
+	
+	<div class="container my-2" style="width: 100%; height: 70%" >
+		<h1>Application Software Management System - HOME</h1>
+
+		<a th:href="@{/software/}" class="btn btn-primary btn-sm mb-3"> Software </a>
+
+		<a th:href="@{/applicationGroup/}" class="btn btn-primary btn-sm mb-3"> ApplicationGroup </a>
+
+		<a th:href="@{/reports/}" class="btn btn-primary btn-sm mb-3"> Reports </a>
+
+		<a th:href="@{/softwareUpdateStatus/}" class="btn btn-primary btn-sm mb-3"> Software Update Status </a>
+
+		<!-- th:href="@{/employee/}" class="btn btn-primary btn-sm mb-3"> Employees </a -->
+
+		<!-- a th:href="@{/machine/}" class="btn btn-primary btn-sm mb-3"> Machines </a -->
+
+	</div>
+	
+	<div class="container my-2">
+		<img width="100%" th:src="@{images/wellsFargoFooter.jpg}"/>
+	</div>
+</body>
+</html>

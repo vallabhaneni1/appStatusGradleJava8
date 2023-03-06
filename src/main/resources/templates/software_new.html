@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Software Management System</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container my-2">
+		<img width="100%" th:src="@{../images/wellsFargoHeader.jpg}"/>
+	</div>
+	<div class="container">
+		<h1>Software Management System</h1>
+		<hr>
+		<h2>Save Software</h2>
+
+		<form action="#" th:action="@{/software/saveSoftware}" th:object="${software}"
+			method="POST">
+			<input type="text" th:field="*{softwareName}"
+				placeholder="Software Name" class="form-control mb-4 col-4">
+
+			<input type="text" th:field="*{softwareDesc}"
+				placeholder="Software Description" class="form-control mb-4 col-4">
+
+			<input type="text" th:field="*{softwareVer}"
+				placeholder="Software Version" class="form-control mb-4 col-4">
+
+			<input type="text" th:field="*{dueDate}" placeholder="Due Date"
+				class="form-control mb-4 col-4">
+
+			<button type="submit" class="btn btn-info col-2">Save
+				Software</button>
+		</form>
+
+		<hr>
+
+		<a th:href="@{/software/}"> Back to Software List</a>
+		<a th:href = "@{/}" > | Home </a>
+		
+	</div>
+	<div class="container my-2">
+		<img width="100%" th:src="@{../images/wellsFargoFooter.jpg}"/>
+	</div>
+</body>
+</html>
